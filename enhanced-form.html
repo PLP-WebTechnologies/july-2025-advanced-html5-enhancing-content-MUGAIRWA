@@ -46,7 +46,6 @@
     </section>
 
     <!-- Weekly Specials Section -->
-     <!-- Specials Section -->
     <section id="specials">
         <h2>Weekly Specials</h2>
         <table border="1">
@@ -110,8 +109,8 @@
 
         <h3>Video</h3>
         <video width="320" height="240" controls>
-            <source src="https://player.vimeo.com/external/403872619.sd.mp4?s=7eeae52a5c706a3d4a0e2c8e403c7e7e5f5f45dd&profile_id=164" type="video/mp4">
-            Your browser does not support the video tag.
+              <source src="https://player.vimeo.com/external/2016738.sd.mp4?s=abcd1234efgh5678&profile_id=164" type="video/mp4">
+              Your browser does not support the video tag.
         </video>
 
 
@@ -124,8 +123,73 @@
         <p><a href="#top">Back to Top</a></p>
     </section>
 
-    
+    <!-- Order Form Section -->
+      <section id="order">
+        <h2>Order & Pickup Form</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required minlength="3"><br><br>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="^\+?[\d\s\-]{8,20}$" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Order Details</legend>
+                <label for="order-type">Order Type:</label>
+                <select id="order-type" name="order_type" required>
+                    <option value="">Choose...</option>
+                    <option value="pickup">Pickup</option>
+                    <option value="delivery">Delivery</option>
+                </select><br><br>
+
+                <label for="items">Items:</label>
+                <textarea id="items" name="items" required minlength="5"></textarea><br><br>
+
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup_date" required><br><br>
+
+                <label for="pickup-time">Pickup Time:</label>
+                <input type="time" id="pickup-time" name="pickup_time" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extras & Payment</legend>
+                <label for="notes">Special Requests:</label>
+                <input type="text" id="notes" name="notes"><br><br>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment_method" required>
+                    <option value="">Choose...</option>
+                    <option value="cash">Cash</option>
+                    <option value="mpesa">MPesa</option>
+                    <option value="card">Card</option>
+                </select><br><br>
+
+                <label for="promo">Promo Code:</label>
+                <input type="text" id="promo" name="promo" pattern="^[A-Z0-9\-]{3,12}$"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pickup Reference</legend>
+                <label for="ref">Reference:</label>
+                <input type="text" id="ref" name="ref" value="SG-UNCONFIRMED" readonly>
+            </fieldset>
+
+            <button type="submit">Submit Order</button>
+        </form>
+        <p><a href="#top">Back to Top</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Suzana Groceries</p>
+    </footer>
 
     </main>
 </body>
